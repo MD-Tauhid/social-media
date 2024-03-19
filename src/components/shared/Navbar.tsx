@@ -1,6 +1,9 @@
 import React from 'react';
+import { CgHomeAlt } from "react-icons/cg";
+import { MdOndemandVideo } from "react-icons/md";
+import { RiGamepadLine } from "react-icons/ri";
 
-const Navbar = () => {
+const Navbar = ({ active = 0 }) => {
     return (
         <nav className="flex justify-between px-10 py-2 items-center bg-[#f0b1b1]">
             <div className="flex items-center gap-5">
@@ -14,14 +17,14 @@ const Navbar = () => {
             </div>
             <div className='flex items-center gap-3'>
                 <ul className='flex items-center gap-1'>
-                    <li className="px-8 py-2 rounded-lg hover:bg-[#e29c9c]">
-                        <svg className='h-6 w-6' fill="none" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 21H7C4.79086 21 3 19.2091 3 17V10.7076C3 9.30887 3.73061 8.01175 4.92679 7.28679L9.92679 4.25649C11.2011 3.48421 12.7989 3.48421 14.0732 4.25649L19.0732 7.28679C20.2694 8.01175 21 9.30887 21 10.7076V17C21 19.2091 19.2091 21 17 21H15M9 21V17C9 15.3431 10.3431 14 12 14V14C13.6569 14 15 15.3431 15 17V21M9 21H15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                    <li className={`px-8 py-2 rounded-lg hover:bg-[#e29c9c] ${active ? 'border-b-2 border-[#4d71b4] text-[#4d71b4]' : ""}`}>
+                        <CgHomeAlt className='w-6 h-6' />
                     </li>
-                    <li className="px-8 py-2 rounded-lg hover:bg-[#e29c9c]">
-                        <svg className='h-6 w-6' viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title /><g data-name="Layer 11" id="Layer_11"><path d="M29.73,9.9A5,5,0,0,0,25.1,5.36a115.19,115.19,0,0,0-18.2,0A5,5,0,0,0,2.27,9.9a69,69,0,0,0,0,12.2A5,5,0,0,0,6.9,26.64c3,.24,6.06.36,9.1.36s6.08-.12,9.1-.36a5,5,0,0,0,4.63-4.54A69,69,0,0,0,29.73,9.9Zm-2,12A3,3,0,0,1,25,24.65a113.8,113.8,0,0,1-17.9,0,3,3,0,0,1-2.78-2.72,65.26,65.26,0,0,1,0-11.86A3,3,0,0,1,7.05,7.35C10,7.12,13,7,16,7s6,.12,9,.35a3,3,0,0,1,2.78,2.72A65.26,65.26,0,0,1,27.73,21.93Z" /><path d="M21.45,15.11l-8-4A1,1,0,0,0,12,12v8a1,1,0,0,0,.47.85A1,1,0,0,0,13,21a1,1,0,0,0,.45-.11l8-4a1,1,0,0,0,0-1.78ZM14,18.38V13.62L18.76,16Z" /></g></svg>
+                    <li className={`px-8 py-2 rounded-lg hover:bg-[#e29c9c] ${active ? 'border-b-2 border-[#4d71b4] text-[#4d71b4]' : ""}`}>
+                        <MdOndemandVideo className='h-6 w-6' />
                     </li>
-                    <li className="px-8 py-2 rounded-lg hover:bg-[#e29c9c]">
-                        <svg className='h-6 w-6' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0h24v24H0z" fill="none" /><path d="M17 4a6 6 0 0 1 6 6v4a6 6 0 0 1-6 6H7a6 6 0 0 1-6-6v-4a6 6 0 0 1 6-6h10zm0 2H7a4 4 0 0 0-3.995 3.8L3 10v4a4 4 0 0 0 3.8 3.995L7 18h10a4 4 0 0 0 3.995-3.8L21 14v-4a4 4 0 0 0-3.8-3.995L17 6zm-7 3v2h2v2H9.999L10 15H8l-.001-2H6v-2h2V9h2zm8 4v2h-2v-2h2zm-2-4v2h-2V9h2z" fill-rule="nonzero" /></g></svg>
+                    <li className={`px-8 py-2 rounded-lg hover:bg-[#e29c9c] ${active ? 'border-b-2 border-[#4d71b4] text-[#4d71b4]' : ""}`}>
+                        <RiGamepadLine className='h-6 w-6' />
                     </li>
                 </ul>
             </div>
