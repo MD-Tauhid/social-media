@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const RightSidebar = () => {
@@ -65,14 +66,30 @@ const RightSidebar = () => {
     ]
     return (
         <>
-            <nav className="w-full h-full border-l bg-white space-y-8 sm:w-80">
+            <nav className="w-full h-full border-l bg-white sm:w-80">
+                <div className='px-6 py-4'>
+                    <div className='flex justify-between items-center  font-semibold text-sm'>
+                        <h1>Friend requests</h1>
+                        <a className='hover:bg-[#f0ecec] px-2 py-1 rounded-lg' href="">See all</a>
+                    </div>
+                    <div className='flex gap-2'>
+                            <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvts5aHBstDkR8PigS4RmZkbZy78zpZoSuOw&usqp=CAU" height={60} width={60} alt="" />
+                        <div >
+                            <h1>Full name</h1>
+                            <div className='flex gap-4'>
+                                <button>Confirm</button>
+                                <button>Reject</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="flex flex-col h-full">
                     <div className="flex-1 flex flex-col h-full overflow-auto">
                         <ul className="px-4 text-sm font-medium flex-1">
                             {
                                 navigation.map((item, idx) => (
                                     <li key={idx}>
-                                        <a href={item.href} className="flex items-center gap-x-2 text-gray-600 p-2 rounded-lg  hover:bg-gray-50 active:bg-gray-100 duration-150">
+                                        <a href={item.href} className="flex items-center gap-x-2 text-gray-600 p-2 rounded-lg  hover:bg-[#f0ecec] active:bg-gray-100 duration-150">
                                             <div className="text-gray-500">{item.icon}</div>
                                             {item.name}
                                         </a>
@@ -85,7 +102,7 @@ const RightSidebar = () => {
                                 {
                                     navsFooter.map((item, idx) => (
                                         <li key={idx}>
-                                            <a href={item.href} className="flex items-center gap-x-2 text-gray-600 p-2 rounded-lg  hover:bg-gray-50 active:bg-gray-100 duration-150">
+                                            <a href={item.href} className="flex items-center gap-x-2 text-gray-600 p-2 rounded-lg  hover:bg-[#f0ecec] active:bg-gray-100 duration-150">
                                                 <div className="text-gray-500">{item.icon}</div>
                                                 {item.name}
                                             </a>
