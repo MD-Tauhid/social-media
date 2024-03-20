@@ -72,14 +72,14 @@ const RightSidebar = () => {
                         <h1>Friend requests</h1>
                         <a className='hover:bg-[#f0ecec] px-2 py-1 rounded-lg' href="">See all</a>
                     </div>
-                    <div className='flex gap-2 bg-gray-50 p-2 rounded-lg'>
+                    <div className='flex gap-2 hover:bg-gray-50 p-2 rounded-lg'>
                         <Image className='h-12' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvts5aHBstDkR8PigS4RmZkbZy78zpZoSuOw&usqp=CAU" height={0} width={60} alt="" />
                         <div className='leading-4 w-full'>
                             <h1>Full name</h1>
                             <span className='text-[11px]'>18 mutual friends</span>
                             <div className='grid grid-cols-2 gap-2 mt-1'>
                                 <button className='bg-[#f0b1b1] p-2 rounded'>Confirm</button>
-                                <button className='bg-[#f1f1f1] p-2 rounded'>Reject</button>
+                                <button className='bg-[#f1f1f1] hover:bg-[#dbdbdb] p-2 rounded'>Reject</button>
                             </div>
                         </div>
                     </div>
